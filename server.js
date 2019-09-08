@@ -13,7 +13,10 @@ if (process.env.NODE_ENV === "production") {
   app.use(express.static("client/build"));
 }
 
-mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/health", {useNewUrlParser: true})
+// mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/health", {useNewUrlParser: true})
+//         .then(()=> console.log("CONNECTED to db! 😁"))
+//         .catch(e=>console.log(e));
+mongoose.connect(process.env.MONGODB_URI || "mongodb://kev3:0c&#C29B3491@ds219308.mlab.com:19308/heroku_87d05ffv", {useNewUrlParser: true})
         .then(()=> console.log("CONNECTED to db! 😁"))
         .catch(e=>console.log(e));
 
