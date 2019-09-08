@@ -6,46 +6,46 @@ const UserSchema = new Schema({
   name: {
     type: String,
     trim: true,
-    required: [true, 'Name is required']
+    required: "name is required"
   },
   //age(Number)
   age: {
     type: Number,
     trim: true,
-    required: [true, 'Age is required']
+    required: "age is required"
   },
   //sex(String)
   sex: {
     type: String,
     trim: true,
-    required: [true, 'Your biological sex is required']
+    required: false
   },
   //weight(Number)
   weight: {
     type: Number,
     trim: true,
-    required: [true, 'Weight is required in lbs']
+    required: "weight is required"
   },
   //height(Number)
   height: {
     type: Number,
     trim: true,
-    required: [true, 'Height is required in cm']
+    required: "height is required"
   },
   pic: {
     type: String,
     trim: true,
-    required: [true, 'Picture is required, please use a url string address']
+    required: false
   },
   username: {
       type: String,
       trim: true,
-      required: [true, 'Username is required']
+      required: "username is required"
   },
   password: {
     type: String,
     trim: true,
-    required: [true, 'Password is required']
+    required: "password is required"
 }
 });
 
