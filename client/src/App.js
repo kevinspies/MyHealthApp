@@ -69,7 +69,7 @@ class App extends Component {
           <div className="row">
             <div className="col-md-12">
               <div className="jumbotron">
-                <h1>B Healthy 🥗</h1>
+                <h1>be healthy 🥗 </h1>
               </div>
 
               <div className="row">
