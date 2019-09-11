@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import axios from "axios";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
 class App extends Component {
   state = {
@@ -52,16 +53,14 @@ class App extends Component {
 
   render() {
     return (
+      <Router>
       <div>
         <nav className="nav bg-dark">
           <a className="nav-link active" href="#">
-            Active
+            Home
           </a>
           <a className="nav-link" href="#">
-            Link
-          </a>
-          <a className="nav-link" href="#">
-            Link
+            About
           </a>
         </nav>
 
@@ -69,10 +68,10 @@ class App extends Component {
           <div className="row">
             <div className="col-md-12">
               <div className="jumbotron">
-                <h1>be healthy 🥗 </h1>
+                <h1>Be Healthy! 🥗 </h1>
               </div>
 
-              <div className="row">
+              <div>
                 <input
                   type="text"
                   className="form-control"
@@ -85,7 +84,7 @@ class App extends Component {
                   type="text"
                   className="form-control"
                   name="password"
-                  placeholder="password"
+                  placeholder="password (no encrytion yet please use something basic for now)"
                   value={this.state.password}
                   onChange={this.handleChange}
                 />
@@ -109,7 +108,7 @@ class App extends Component {
                   type="text"
                   className="form-control"
                   name="sex"
-                  placeholder="sex"
+                  placeholder="sex (m/f)"
                   value={this.state.sex}
                   onChange={this.handleChange}
                 />
@@ -117,7 +116,7 @@ class App extends Component {
                   type="text"
                   className="form-control"
                   name="weight"
-                  placeholder="weight"
+                  placeholder="weight (lbs)"
                   value={this.state.weight}
                   onChange={this.handleChange}
                 />
@@ -125,7 +124,7 @@ class App extends Component {
                   type="text"
                   className="form-control"
                   name="height"
-                  placeholder="height"
+                  placeholder="height (i.e. 5'8)"
                   value={this.state.height}
                   onChange={this.handleChange}
                 />
@@ -133,7 +132,7 @@ class App extends Component {
                   type="text"
                   className="form-control"
                   name="pic"
-                  placeholder="pic"
+                  placeholder="picture (URL image address)"
                   value={this.state.pic}
                   onChange={this.handleChange}
                 />
@@ -141,8 +140,11 @@ class App extends Component {
                   Add User
                 </button>
               </div>
-
-              <div>
+            </div>
+          </div>
+          <div className="row">
+            <div className="col-md-12">
+              <div className="card-columns">
                 {this.state.users.map((user, i) => (
                   <div className="card" style={{ width: "18rem" }}>
                     <img src={user.pic} className="card-img-top" alt="..." />
@@ -163,6 +165,7 @@ class App extends Component {
           </div>
         </div>
       </div>
+      </Router>
     );
   }
 }
